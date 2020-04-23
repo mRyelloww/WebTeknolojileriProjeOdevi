@@ -1,0 +1,132 @@
+#baslik
+{
+    border:3px solid #6F6D09 ;
+    height:150px;
+    text-align:left;
+    padding-top:50px;
+    background-color:#B4B11E 
+}
+
+#menu
+{
+    border:1px solid black;
+    height:600px;
+    padding:0px;  
+    font-size:13pt;
+}
+
+#paragraf
+{
+    border: 1px solid;
+    height:600px;
+}
+
+#paragraf p
+{
+    font-size:13pt;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+#ozgecmis
+{
+    border: 1px solid black;
+    height:600px;
+}
+
+#ozgecmis p
+{
+    margin-top:15px;
+    font-size:12pt;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#kücükbaslik
+{
+    border:1px solid black;
+    height:75px;
+    padding-top:15px;
+}
+
+#menu ul
+{
+    list-style-type: none;
+    font-weight:bold;
+    font-family:sans-serif;
+    margin:0;
+    padding:0;
+    text-align:center;
+    height:30px;
+}
+
+#menu ul:hover
+{
+    background-color:#73C6B6
+}
+
+#menu a
+{
+    color:black;
+    display:block;
+}
+
+#sehirgecmis
+{
+    border: 1px solid black;
+    height:600px;
+}
+
+#sehirgecmis p
+{
+    margin-top:15px;
+    font-size:15pt;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#bilgi
+{
+    border: 1px solid black;
+    height:600px;
+}
+
+#bilgi p
+{
+    margin-top:15px;
+    font-size:16pt;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#takimimiz
+{
+    border: 1px solid black;
+    height:600px;
+}
+
+#takimparagraf
+{
+    margin-top:15px;
+    font-size:11pt;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    float:left;
+}
+
+#responsive
+{
+    display:block;
+    max-width:100%;
+    min-width:250px;
+    height : 300px;
+}
+
+#responsiveindex
+{
+    display:block;
+    max-width:100%;
+    min-width:100px;
+    height :400px;
+}
