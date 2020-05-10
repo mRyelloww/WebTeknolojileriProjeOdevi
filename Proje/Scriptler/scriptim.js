@@ -1,38 +1,39 @@
 function temizle()
 {
-    document.getElementById("myForm").reset();
+    document.getElementById("iletisimForm").reset();
 }
 
-function validateForm()
+function iletisimDogrulama()
 {
-    var x = document.forms["myForm"]["ad"].value;    
+    var x = document.forms["iletisimForm"]["ad"].value;    
     if (x == null || x == "") 
     {
         alert("Adınızı girin.");
         return false;
     }
-    var y = document.forms["myForm"]["soyad"].value;
+    var y = document.forms["iletisimForm"]["soyad"].value;
     if(y == null || y == "")
     {
         alert("Soyadınızı girin.");
         return false;
     }
-    var k = document.forms["myForm"]["message"].value;
+    var k = document.forms["iletisimForm"]["message"].value;
     if(k == null || k == "")
     {
         alert("Mesajınızı girin.")
         return false;
     }
-    var c = document.forms["myForm"]["e-mail"].value;
-    if(validateEmail(c) == false)
+    var c = document.forms["iletisimForm"]["e-mail"].value;
+    if(emailDogrulama(c) == false)
     {
-        alert("E-mailinizi kontrol ediniz.")
+        alert("Geçerli bir e-mail giriniz.")
         return false;
     }
 }
 
-function validateEmail(email) 
+function emailDogrulama(email) 
 {
-    var re = /\S+@\S+\.\S+/;
-    return re.test(email);
+    var tester = /\S+@\S+\.\S+/;
+	
+    return tester.test(email);
 }

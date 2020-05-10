@@ -12,12 +12,12 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <title>İletişim</title>
     </head>
-
+    
     <body>
         <div class = "container-fluid">
             <div class = "row" id = "baslik">
                 <div class = "col-lg-12">
-                    <div class="container-fluid"><h1>İLETİŞİM</h1></div>
+                    <div class="container-fluid"><h1>GİRİŞ YAP</h1></div>
                 </div>
             </div>
             <div class = "row">
@@ -32,24 +32,78 @@
                     </list>
                 </div>
                 <div class = "col-lg-11 col-sm-10 col-xs-9 col-md-10" id = "paragraf">
-                    <h1>Bilgileriniz</h1>
-                    <form action = "iletisim_page.php" method = "POST" id = "iletisimForm" onsubmit = "return iletisimDogrulama()">
-                        Adınız:<br> <input type = "text" name = "ad"><br>
-                        Soyadınız:<br> <input type = "text" name = "soyad"><br>
-                        E-mail:<br> <input type = "text" name = "e-mail" size = 50><br>
-                        Cinsiyetiniz: <br>
-                        <input type = "radio" name = "cinsiyet" value = "Erkek" checked>Erkek<br>
-                        <input type = "radio" name = "cinsiyet" value = "Kadın">Kadın<br>
-                        <input type = "radio" name = "cinsiyet" value = "Diğer">Diğer<br>
-                        <textarea name = "message" rows = "5" cols = "50" placeholder="Mesajınız..."></textarea><br>
-                        <select name = "neden" id = "mesaj">
-                            <option value = "istek">İstek</option>
-                            <option value = "tesekkür">Teşekkür</option>
-                            <option value = "yardim">Yardım</option>
-                        </select><br><br>
-                        <input type = "button" onclick = "temizle()" value = "Temizle" >
-                        <input type = "submit" value = "Gönder">
+                    <form action = "login_page.php" method = "POST">
+                        Kullanıcı Adı:<br> <input type = "text" name = "kullaniciAd"><br>
+                        Şifre:<br> <input type = "password" name = "sifre"><br>
+						<br>
+                        <input type = "submit" value = "Giriş Yap">
                     </form>
+    <?php
+        if(isset($_GET['geriDon']))
+        {
+            if($_GET['geriDon'] == 'girisBasarisiz')
+            {
+               ?>
+                <div class = "alert">
+                    Kullanıcı adı veya şifre hatalı.
+                </div>
+               <?php
+            }
+      
+        }
+                    
+        if(isset($_GET['geriDon']))
+        {
+            if($_GET['geriDon'] == 'mailTipindeDegil')
+            {
+               ?>
+                <div class = "alert">
+                    Kullanıcı adı mail tipinde değil.
+                </div>
+               <?php
+            }
+      
+        }
+                    
+        if(isset($_GET['geriDon']))
+        {
+            if($_GET['geriDon'] == 'ikisideBos')
+            {
+               ?>
+                <div class = "alert">
+                    Kullanıcı adı ve şifre boş bırakılamaz.
+                </div>
+               <?php
+            }
+      
+        }
+                    
+        if(isset($_GET['geriDon']))
+        {
+            if($_GET['geriDon'] == 'kullaniciBos')
+            {
+               ?>
+                <div class = "alert">
+                    Kullanıcı adı boş bırakılamaz.
+                </div>
+               <?php
+            }
+      
+        }
+        if(isset($_GET['geriDon']))
+        {
+            if($_GET['geriDon'] == 'sifreBos')
+            {
+               ?>
+              <div class = "alert">
+                    Şifre boş bırakılamaz.
+              </div>
+               <?php
+            }
+            
+        }
+        
+    ?>
                 </div>
             </div>
         </div>
